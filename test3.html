@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算属性和侦听器</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+<div id="root"> 
+	<input type="text" v-model="lastName">
+	<input type="text" v-model="firstName">
+ 	{{fullName}}
+ 	{{sum}}
+</div>
+
+
+<script type="text/javascript">
+	new Vue({
+		el:'#root',
+		data:{
+			lastName:"",
+			firstName:"",
+			sum:0
+		},
+		computed:{
+			fullName:function()
+			{
+				return this.lastName+" "+this.firstName
+			}
+		},
+		watch:{
+			fullName:function()
+			{
+				this.sum++;
+			}
+		}
+	})
+</script>
+</body>
+</html>
