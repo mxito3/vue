@@ -6,14 +6,15 @@
 </head>
 <body>
 	<p id="hello">
-		{{message}}
+		{{message}}       
+		<!-- 需要用到的数据用双大括号括起来 -->
 	</p>
 	<script type="text/javascript">
 		new Vue({
-			el: "#hello",
+			el: "#hello",       //绑定到hello
 			data:
 			{
-				message:"hello world vue.js"
+				message:"hello world vue.js"         //不用再去操作dom，直接把数据放在data里面就okay了
 			}
 		})
 	</script>
