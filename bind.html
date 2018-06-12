@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello world</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+	<div id="hello">  
+		<h1 v-on:click="change">{{message}}</h1>  <!-- 两个花括号指的是插值表达式，即把值插入到对应位置之后之后     -->
+	</div>
+	<script type="text/javascript">
+		new Vue({   //新建一个实例
+			el: "#hello",       //说明挂载点
+			methods:{
+				change:function()
+				{
+					this.message="hello";
+				}
+			},
+			data:
+			{
+				message:"world "         //不用再去操作dom，直接把数据放在data里面就okay了
+			}
+		})
+	</script>
+</body>
+</html>
