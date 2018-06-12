@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>属性绑定和双向数据绑定</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+	<!-- 属性绑定 -->
+<div id="root" v-bind:title="title">  <!-- v-bind:可以缩写成 ： -->
+	<!-- {{message}} -->
+	<!-- 双向数据绑定 -->
+	<input type="" name="" v-model="message">
+	<!-- v-model实现双向数据绑定 -->
+	{{message}}
+</div>
+
+
+<script type="text/javascript">
+	new Vue({
+		el:'#root',
+		data:{
+			message:'hello',
+			title:'hello wolrd yapie'
+		}
+	})
+</script>
+</body>
+</html>
