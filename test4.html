@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>v-if,v-show,v-for</title>
+	<script type="text/javascript" src="./vue.js"></script>
+</head>
+<body>
+<div id="root"> 
+	<div v-if="ifShow"> 
+		hhhhh
+	</div>
+	<button @click="changeShow">
+		点击我奥
+	</button>
+	<ul>
+		<li v-for="item in numbers">
+			{{item}}
+		</li>
+	</ul>
+
+</div>
+
+
+<script type="text/javascript">
+	new Vue({
+		el:'#root',
+		data:{
+			ifShow:false,
+			numbers:[1,2,3]
+			},
+		methods:{
+			changeShow:function()
+			{
+				this.ifShow=!this.ifShow
+			}
+		}
+	})
+</script>
+</body>
+</html>
