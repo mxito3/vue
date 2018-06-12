@@ -1,2 +1,8 @@
 官网：
 https://cn.vuejs.org/v2/guide/
+
+
+v-model:实现数据双向绑定
+v-bind:实现属性绑定     简写为：
+v-on：实现事件绑定   简写为@:
+
