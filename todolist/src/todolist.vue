@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="" name="" v-model="task">
+    <input type="" name="" v-model="task" class="item">
     <button @click="handleClick">提交</button>
     <ul>
       <Task v-for="(item,index) of list" :key="index" :content="item" :index="index"
