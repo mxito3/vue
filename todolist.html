@@ -8,11 +8,16 @@
 	<div id="root">
 		<input type="text" v-model="task">
 		<button @click="handleClick">提交</button>
-		<ul v-for="(item,index) of list" :key="index">
-			<li>{{item}}</li>
+		<ul>
+			<todolist  v-for="(item,index) of list" :content="item"  :key="index"></todolist>
+			<!-- content是自定义属性 -->
 		</ul>
 	</div>
 	<script type="text/javascript">
+		Vue.component('todolist',{
+			props:['content'],          //接收父组件传来的属性
+			template:'<li>{{content}}</li>'
+		})
 		new Vue({
 			el:"#root",
 			data:{
