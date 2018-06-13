@@ -13,8 +13,10 @@
 			<!-- content是自定义属性 -->
 		</ul>
 	</div>
+
 	<script type="text/javascript">
-		Vue.component('todolist',{
+		//利用全局组件
+		/*Vue.component('todolist',{
 			props:['content'],          //接收父组件传来的属性
 			template:'<li>{{content}}</li>'
 		})
@@ -23,6 +25,29 @@
 			data:{
 				task:'',
 				list:[]
+			},
+			methods:
+			{
+				handleClick:function(){
+					this.list.push(this.task)
+					this.task=''
+				}
+			}
+		})*/
+
+		//利用局部组件
+		var TOdolist={
+			template:'<li>{{content}}</li>',
+			props:['content']
+		}
+		new Vue({
+			el:"#root",
+			data:{
+				task:'',
+				list:[]
+			},
+			components:{
+				'todolist':TOdolist
 			},
 			methods:
 			{
